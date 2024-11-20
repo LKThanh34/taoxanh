@@ -1,6 +1,5 @@
 package com.dev.taoxanh.domain;
 
-
 import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -11,20 +10,18 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 
-
-
 @MappedSuperclass
 public class BaseModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // IDENTITY
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "create_by", nullable =  true)
+    @Column(name = "create_by", nullable = true)
     private Integer createBy;
 
-    @Column(name = "update_by")
+    @Column(name = "update_by", nullable = true)
     private Integer updateBy;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -32,7 +29,7 @@ public class BaseModel {
     private Date createDate;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @Column(name = "create_date")   
+    @Column(name = "update_date")
     private Date updateDate;
 
     @Column(name = "status")
@@ -86,10 +83,8 @@ public class BaseModel {
         this.status = status;
     }
 
-    public BaseModel() {
-    }
-
     public BaseModel(Integer id, Integer createBy, Integer updateBy, Date createDate, Date updateDate, Boolean status) {
+        super();
         this.id = id;
         this.createBy = createBy;
         this.updateBy = updateBy;
@@ -97,8 +92,7 @@ public class BaseModel {
         this.updateDate = updateDate;
         this.status = status;
     }
-    
-    
 
-
+    public BaseModel() {
+    }
 }

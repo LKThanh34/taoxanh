@@ -9,8 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "slide_image")
-public class SlideImage extends BaseModel{
+@Table(name = "tbl_slide_image")
+public class SlideImage extends BaseModel {
 
     @Column(name = "name", length = 300, nullable = true)
     private String name;
@@ -29,7 +29,7 @@ public class SlideImage extends BaseModel{
         this.description = description;
     }
 
-    public SlideImage(){
+    public SlideImage() {
         super();
     }
 
@@ -56,4 +56,5 @@ public class SlideImage extends BaseModel{
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

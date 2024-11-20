@@ -1,6 +1,5 @@
 package com.dev.taoxanh.domain;
 
-
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +12,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "categories")
+@Table(name = "tbl_category")
 public class Category extends BaseModel {
 
     @Column(name = "name", length = 200, nullable = false)
@@ -22,23 +21,24 @@ public class Category extends BaseModel {
     @Column(name = "description", length = 300, nullable = true)
     private String description;
 
-	// Ánh xạ quan hệ với Product (1)
-	//Mapping one-to-many: category-to-product
-	// mapped đến category ở bên Product
+    // Ánh xạ quan hệ với Product (1)
+    // Mapping one-to-many: category-to-product
+    // mapped đến category ở bên Product
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "category")
     private Set<Product> products = new HashSet<Product>();
 
-    public void addRelationalProduct(Product product){
+    // Phuong thuc them va xoa phan tu trong danh sach quan he category-product
+    public void addRelationalProduct(Product product) {
         products.add(product);
         product.setCategory(this);
     }
 
-    public void deleteRelationalProduct(Product product){
+    public void deleteRelationalProduct(Product product) {
         products.remove(product);
         product.setCategory(null);
     }
 
-    public Category(){
+    public Category() {
         super();
     }
 
