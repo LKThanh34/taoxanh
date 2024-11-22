@@ -1,5 +1,10 @@
 package com.dev.taoxanh.domain;
 
+import java.util.List;
+
+
+
+
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -25,6 +30,7 @@ public class Role extends BaseModel {
 	@Column(name = "description", length = 300, nullable = true)
 	private String description;
 
-    
+	@OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.LAZY) 
+    private List<User> users;
 	
 }

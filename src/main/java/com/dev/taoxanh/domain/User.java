@@ -1,13 +1,12 @@
 package com.dev.taoxanh.domain;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -21,7 +20,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User  {
+public class User extends BaseModel {
 
     @Column(name = "username", length = 60, nullable = false)
 	private String username;
@@ -44,6 +43,11 @@ public class User  {
 	@Column(name = "spending", nullable = false)
 	private BigDecimal spending;
 
-    private List<Role> roles = new ArrayList<Role>();
-    
+	
+	@ManyToOne
+	@JoinColumn(name = "role_id", nullable = false)
+    private Role role;
+
+	@OneToMany(mappedBy = "user")
+	private List<Order> orders;
 }
