@@ -3,20 +3,16 @@ package com.dev.taoxanh.controller.admin;
 import java.util.List;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.dev.taoxanh.domain.User;
 import com.dev.taoxanh.service.UploandService;
 import com.dev.taoxanh.service.UserService;
 
+@Controller
 public class UserController {
     private final UserService userService;
     private final UploandService uploandService;
@@ -34,6 +30,14 @@ public class UserController {
         System.out.println(">>> Check users arr " + users);
         model.addAttribute("users1", users);
         return "admin/user/show";
+    }
+
+    @RequestMapping("/admin/user/{id}")
+    public String getUserDetailPage(Model model, @PathVariable long id) {
+        User user = this.userService.getUserById(id);
+        model.addAttribute("user",user);
+        model.addAttribute("id", id);
+        return "admin/user/detail";
     }
 
     @GetMapping(value = "/admin/user/create")

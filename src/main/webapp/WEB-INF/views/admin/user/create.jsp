@@ -61,8 +61,8 @@
                                                     <form:input type="text" class="form-control" path="phone" />
                                                 </div>
                                                 <div class="mb-3 col-12 col-md-6">
-                                                    <label class="form-label">Full Name:</label>
-                                                    <form:input type="text" class="form-control" path="fullName" />
+                                                    <label class="form-label">Name:</label>
+                                                    <form:input type="text" class="form-control" path="username" />
                                                 </div>
                                                 <div class="mb-3 col-12">
                                                     <label class="form-label">Address:</label>
@@ -78,9 +78,9 @@
                                                     <label class="form-label">Role:</label>
                                                     <!-- tag form để javaSpring quản lý đối tượng Role( truy cập thuộc tính của Object  -->
                                                     <form:select class="form-select" path="role.name">
-                                                        <form:option value="Admin">ADMIN</form:option>
-                                                        <form:option value="Staff">Staff</form:option>
-                                                        <form:option value="User">USER</form:option>
+                                                        <form:option value="ADMIN">ADMIN</form:option>
+                                                        <form:option value="STAFF">Staff</form:option>
+                                                        <form:option value="USER">USER</form:option>
                                                     </form:select>
                                                 </div>
                                                 <div class="mb-3 col-12 col-md-6">

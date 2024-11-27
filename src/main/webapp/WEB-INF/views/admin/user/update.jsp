@@ -10,7 +10,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content="Hỏi Dân IT - Dự án laptopshop" />
                 <meta name="author" content="Hỏi Dân IT" />
-                <title>Update User - Hỏi Dân IT</title>
+                <title>Update User</title>
                 <link href="/css/styles.css" rel="stylesheet" />
 
                 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -61,7 +61,7 @@
                                                 </div>
 
                                                 <div class="mb-3">
-                                                    <label class="form-label">Descrpition:</label>
+                                                    <label class="form-label">Description:</label>
                                                     <form:input type="text" class="form-control" path="description" />
                                                 </div>
 
