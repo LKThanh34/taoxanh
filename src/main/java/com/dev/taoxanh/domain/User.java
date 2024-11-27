@@ -22,7 +22,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class User extends BaseModel {
 
-    @Column(name = "username", length = 60, nullable = false)
+	@Column(name = "username", length = 60, nullable = false)
 	private String username;
 
 	@Column(name = "password", length = 60, nullable = false)
@@ -31,8 +31,11 @@ public class User extends BaseModel {
 	@Column(name = "email", length = 120, nullable = true)
 	private String email;
 
-	@Column(name = "mobile", length = 120, nullable = true)
-	private String mobile;
+	@Column(name = "phone", length = 120, nullable = true)
+	private String phone;
+
+	@Column(name = "address", length = 200, nullable = true)
+	private String address;
 
 	@Column(name = "description", length = 200, nullable = true)
 	private String description;
@@ -41,12 +44,12 @@ public class User extends BaseModel {
 	private String avatar;
 
 	@Column(name = "spending", nullable = false)
-	private BigDecimal spending;
+	private BigDecimal spending = BigDecimal.ZERO;
 
-	
+
 	@ManyToOne
 	@JoinColumn(name = "role_id", nullable = false)
-    private Role role;
+	private Role role;
 
 	@OneToMany(mappedBy = "user")
 	private List<Order> orders;

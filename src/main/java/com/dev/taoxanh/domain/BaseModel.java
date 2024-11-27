@@ -23,7 +23,7 @@ public abstract class BaseModel {
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // IDENTITY
 	@Column(name = "id")
-	private Integer id;
+	private Long id;
 
 	@Column(name = "create_by", nullable = true)
 	private Integer createBy;
