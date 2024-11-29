@@ -44,6 +44,13 @@ public class Product extends BaseModel {
     @Column(name = "avatar", length = 255, nullable = true)
     private String avatar;
 
+
+    @Column(name = "color", length = 125, nullable = true)
+    private String color;
+
+    @Column(name = "memory", length = 255, nullable = true)
+    private String memory;
+
     @Column(name = "is_hot", nullable = true)
     private Boolean isHot = Boolean.FALSE;
 

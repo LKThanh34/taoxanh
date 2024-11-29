@@ -22,7 +22,7 @@
             }
         } else {
             if ($(this).scrollTop() > 55) {
-                $('.fixed-top').addClass('shadow').css('top', 0);
+                $('.fixed-top').addClass('shadow').css('top', -55);
             } else {
                 $('.fixed-top').removeClass('shadow').css('top', 0);
             }
@@ -46,7 +46,7 @@
 
     // Testimonial carousel
     $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
+        // autoplay: true,
         smartSpeed: 2000,
         center: false,
         dots: true,
@@ -80,7 +80,6 @@
 
     // vegetable carousel
     $(".vegetable-carousel").owlCarousel({
-        autoplay: true,
         smartSpeed: 1500,
         center: false,
         dots: true,
