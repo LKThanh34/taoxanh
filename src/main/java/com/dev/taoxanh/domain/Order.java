@@ -4,6 +4,9 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -16,6 +19,10 @@ import lombok.Setter;
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.Date;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "orders")
@@ -23,7 +30,20 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Order extends BaseModel {
+public class Order {
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+	@CreationTimestamp
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Column(name = "order_date", nullable = true)
+	private Date orderDate;
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Column(name = "receive_date", nullable = true)
+	private Date receiveDate;
 
 	@Column(name = "code", length = 45, nullable = false)
 	private String code;
@@ -48,8 +68,8 @@ public class Order extends BaseModel {
 	@Column(name = "customer_mobile", length = 100, nullable = true)
 	private String customerMobile;
 
-	@Column(name = "description", length = 3000, nullable = true)
-	private String description;
+	@Column(name = "description_order", length = 3000, nullable = true)
+	private String descriptionOrder;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "order")
 	private Set<OrderDetail> orderDetails = new HashSet<>();

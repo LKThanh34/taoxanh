@@ -8,10 +8,10 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <meta name="description" content="Website taoxanh.vn" />
-            <meta name="author" content="Hỏi Dân IT" />
-            <title>taoxanh.vn</title>
-            <link href="/css/styles.css" rel="stylesheet" />
-            <link href="/css/fontawesome.css" rel="style"/>
+            <meta name="author" content="Le Kim Thanh" />
+            <title>taoxanh</title>
+            <link href="admin/css/styles.css" rel="stylesheet" />
+            <link href="admin/css/fontawesome.css" rel="style"/>
             <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         </head>
 
@@ -37,7 +37,7 @@
             </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
                 crossorigin="anonymous"></script>
-            <script src="/js/scripts.js"></script>
+            <script src="admin/js/scripts.js"></script>
         </body>
 
         </html>

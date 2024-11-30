@@ -1,10 +1,16 @@
 package com.dev.taoxanh.domain;
 
-import java.math.BigDecimal;
 import java.util.List;
+import java.util.Date;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -20,13 +26,21 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User extends BaseModel {
+public class User {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@CreationTimestamp
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Column(name = "create_date", nullable = true)
+	private Date createDate;
 
 	@Column(name = "username", length = 60, nullable = false)
 	private String username;
 
-	@Column(name = "password", length = 60, nullable = false)
-	private String password;
+	@Column(name = "user_password", length = 60, nullable = false)
+	private String userPassword;
 
 	@Column(name = "email", length = 120, nullable = true)
 	private String email;
@@ -37,15 +51,11 @@ public class User extends BaseModel {
 	@Column(name = "address", length = 200, nullable = true)
 	private String address;
 
-	@Column(name = "description", length = 200, nullable = true)
-	private String description;
+	@Column(name = "user_description", length = 200, nullable = true)
+	private String userDescription;
 
-	@Column(name = "avatar", length = 255, nullable = true)
-	private String avatar;
-
-	@Column(name = "spending", nullable = false)
-	private BigDecimal spending = BigDecimal.ZERO;
-
+	@Column(name = "avatar_iamge", length = 255, nullable = true)
+	private String avatarImage;
 
 	@ManyToOne
 	@JoinColumn(name = "role_id", nullable = false)

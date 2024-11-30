@@ -10,7 +10,8 @@
             <meta name="description" content="Website taoxanh.vn" />
             <meta name="author" content="Le Kim Thanh" />
             <title>taoxanh</title>
-            <link href="/admin/css/styles.css" rel="stylesheet" />
+            <link href="admin/css/styles.css" rel="stylesheet" />
+            <link href="admin/css/fontawesome.css" rel="style"/>
             <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         </head>
 
@@ -24,7 +25,8 @@
                             <h1 class="mt-4">Manage Users</h1>
                             <ol class="breadcrumb mb-4">
                                 <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Users</li>
+                                <li class="breadcrumb-item"><a href="/admin">Categories</a></li>
+                                <li class="breadcrumb-item active">Series</li>
                             </ol>
                             <div class="mt-5">
                                 <div class="row">
@@ -47,7 +49,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <c:forEach var="user" items="${users1}">
+                                                <c:forEach var="series" items="${series1}">
 
                                                     <tr>
                                                         <th>${user.id}</th>
@@ -81,7 +83,7 @@
             </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
                 crossorigin="anonymous"></script>
-            <script src="/admin//js/scripts.js"></script>
+            <script src="/admin/js/scripts.js"></script>
 
         </body>
 

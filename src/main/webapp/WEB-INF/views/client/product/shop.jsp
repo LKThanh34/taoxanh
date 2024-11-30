@@ -10,7 +10,7 @@
             <jsp:include page="../layout/navigation.jsp" />
 
             <!-- breadcrumb -->
-            <div class="container-fluid bg-light">
+            <div class="container-fluid bg-white">
                 <div class="container">
                     <ol class="breadcrumb mb-0 small text-truncate">
                         <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
@@ -26,7 +26,8 @@
                         <div class="col-md-6 col-lg-12">
                             <a href="#">
                                 <div class="service-item">
-                                    <img src="/client/img/col_banner_img1.png" class="img-fluid rounded-top w-100" alt="">
+                                    <img src="/client/img/col_banner_img1.png" class="img-fluid rounded-top w-100"
+                                        alt="">
                                 </div>
                             </a>
                         </div>
@@ -44,7 +45,7 @@
                             <div class="row">
                                 <div class="col-xl-9"></div>
                                 <div class="col-xl-3">
-                                    <div class="bg-light justify-content-between mb-4">
+                                    <div class="bg-white justify-content-between mb-4">
                                         <label for="fruits">Sắp Xếp :</label>
                                         <select id="fruits" name="fruitlist"
                                             class="border-0 form-select-sm bg-light me-3" form="fruitform">
@@ -98,7 +99,8 @@
                                         <div class="col-md-6 col-lg-6 col-xl-2">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="/client/img/iphonetest.png" class="img-fluid w-150 " alt="">
+                                                    <img src="/client/img/iphonetest.png" class="img-fluid w-150 "
+                                                        alt="">
                                                 </div>
                                                 <div class="text-white bg-danger px-3 py-1 rounded position-absolute"
                                                     style="top: 10px; left: 10px;">new</div>
@@ -113,8 +115,8 @@
                                         <div class="col-md-6 col-lg-6 col-xl-2">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="/client/img/iphonetest.png" class="img-fluid w-100 rounded-top"
-                                                        alt="">
+                                                    <img src="/client/img/iphonetest.png"
+                                                        class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
                                                     style="top: 10px; left: 10px;">new</div>
@@ -129,8 +131,8 @@
                                         <div class="col-md-6 col-lg-6 col-xl-2">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="/client/img/iphonetest.png" class="img-fluid w-100 rounded-top"
-                                                        alt="">
+                                                    <img src="/client/img/iphonetest.png"
+                                                        class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
                                                     style="top: 10px; left: 10px;">new</div>
@@ -145,8 +147,8 @@
                                         <div class="col-md-6 col-lg-6 col-xl-2">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="/client/img/iphonetest.png" class="img-fluid w-100 rounded-top"
-                                                        alt="">
+                                                    <img src="/client/img/iphonetest.png"
+                                                        class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
                                                     style="top: 10px; left: 10px;">new</div>
@@ -161,8 +163,8 @@
                                         <div class="col-md-6 col-lg-6 col-xl-2">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="/client/img/iphonetest.png" class="img-fluid w-100 rounded-top"
-                                                        alt="">
+                                                    <img src="/client/img/iphonetest.png"
+                                                        class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
                                                     style="top: 10px; left: 10px;">new</div>
@@ -177,8 +179,8 @@
                                         <div class="col-md-6 col-lg-6 col-xl-2">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="/client/img/iphonetest.png" class="img-fluid w-100 rounded-top"
-                                                        alt="">
+                                                    <img src="/client/img/iphonetest.png"
+                                                        class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
                                                     style="top: 10px; left: 10px;">new</div>
@@ -193,8 +195,8 @@
                                         <div class="col-md-6 col-lg-6 col-xl-2">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="/client/img/iphonetest.png" class="img-fluid w-100 rounded-top"
-                                                        alt="">
+                                                    <img src="/client/img/iphonetest.png"
+                                                        class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
                                                     style="top: 10px; left: 10px;">like new</div>
@@ -229,6 +231,66 @@
                 </div>
             </div>
             <!--  Shop End-->
+            <!-- Tin tức khuyến mại-->
+            <div class="container-fluid vesitable">
+                <div class="container">
+                    <h3 class="mb-0 news-title">Tin tức khuyến mãi</h3>
+                    <div class="owl-carousel vegetable-carousel justify-content-center">
+                        <div class="border rounded position-relative vesitable-item">
+                            <div class="vesitable-img">
+                                <img src="/client/img/km1.png" class="img-fluid w-100 rounded-top" alt="">
+                            </div>
+                            <div class="text-white bg-danger px-3 py-1 rounded position-absolute"
+                                style="top: 10px; right: 10px;">Hot</div>
+                            <div class="p-4 rounded-bottom news-content">
+                                <p>BLACK FRIDAY 2024 || SALE TOÀN BỘ SẢN PHẨM</p>
+                            </div>
+                        </div>
+                        <div class="border rounded position-relative vesitable-item">
+                            <div class="vesitable-img">
+                                <img src="/client/img/km1.png" class="img-fluid w-100 rounded-top" alt="">
+                            </div>
+                            <div class="text-white bg-danger px-3 py-1 rounded position-absolute"
+                                style="top: 10px; right: 10px;">Hot</div>
+                            <div class="p-4 rounded-bottom news-content">
+                                <p>BLACK FRIDAY 2024 || SALE TOÀN BỘ SẢN PHẨM</p>
+                            </div>
+                        </div>
+                        <div class="border rounded position-relative vesitable-item">
+                            <div class="vesitable-img">
+                                <img src="/client/img/km1.png" class="img-fluid w-100 rounded-top" alt="">
+                            </div>
+                            <div class="text-white bg-danger px-3 py-1 rounded position-absolute"
+                                style="top: 10px; right: 10px;">Hot</div>
+                            <div class="p-4 rounded-bottom news-content">
+                                <p>BLACK FRIDAY 2024 || SALE TOÀN BỘ SẢN PHẨM</p>
+                            </div>
+                        </div>
+                        <div class="border rounded position-relative vesitable-item">
+                            <div class="vesitable-img">
+                                <img src="/client/img/km1.png" class="img-fluid w-100 rounded-top" alt="">
+                            </div>
+                            <div class="text-white bg-danger px-3 py-1 rounded position-absolute"
+                                style="top: 10px; right: 10px;">Hot</div>
+                            <div class="p-4 rounded-bottom news-content">
+                                <p>BLACK FRIDAY 2024 || SALE TOÀN BỘ SẢN PHẨM</p>
+                            </div>
+                        </div>
+                        <div class="border rounded position-relative vesitable-item">
+                            <div class="vesitable-img">
+                                <img src="/client/img/km1.png" class="img-fluid w-100 rounded-top" alt="">
+                            </div>
+                            <div class="text-white bg-danger px-3 py-1 rounded position-absolute"
+                                style="top: 10px; right: 10px;">Hot</div>
+                            <div class="p-4 rounded-bottom news-content">
+                                <p>BLACK FRIDAY 2024 || SALE TOÀN BỘ SẢN PHẨM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 
             <jsp:include page="../layout/footer.jsp" />
 

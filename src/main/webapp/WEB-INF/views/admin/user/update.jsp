@@ -8,10 +8,10 @@
                 <meta charset="utf-8" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-                <meta name="description" content="Hỏi Dân IT - Dự án laptopshop" />
-                <meta name="author" content="Hỏi Dân IT" />
-                <title>Update User</title>
-                <link href="/css/styles.css" rel="stylesheet" />
+                <meta name="description" content="Website taoxanh.vn" />
+                <meta name="author" content="Le Kim Thanh" />
+                <title>taoxanh</title>
+                <link href="/admin/css/styles.css" rel="stylesheet" />
 
                 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
             </head>
@@ -62,7 +62,7 @@
 
                                                 <div class="mb-3">
                                                     <label class="form-label">Description:</label>
-                                                    <form:input type="text" class="form-control" path="description" />
+                                                    <form:input type="text" class="form-control" path="userDescription" />
                                                 </div>
 
 

@@ -373,44 +373,46 @@
                         <div class="owl-carousel vegetable-carousel justify-content-center">
                             <div class="border border-primary rounded position-relative vesitable-item">
                                 <div class="vesitable-img">
-                                    <img src="/client/img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                </div>
-                                <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                    style="top: 10px; right: 10px;">Vegetable</div>
-                                <div class="p-4 pb-0 rounded-bottom">
-                                    <h4>Parsely</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
-                                        incididunt</p>
-                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                        <p class="text-dark fs-5 fw-bold">$4.99 / kg</p>
-                                        <a href="#"
-                                            class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border border-primary rounded position-relative vesitable-item">
-                                <div class="vesitable-img">
-                                    <img src="/client/img/vegetable-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                </div>
-                                <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                    style="top: 10px; right: 10px;">Vegetable</div>
-                                <div class="p-4 pb-0 rounded-bottom">
-                                    <h4>Parsely</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
-                                        incididunt</p>
-                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                        <p class="text-dark fs-5 fw-bold">$4.99 / kg</p>
-                                        <a href="#"
-                                            class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border border-primary rounded position-relative vesitable-item">
-                                <div class="vesitable-img">
-                                    <img src="/client/img/vegetable-item-3.png" class="img-fluid w-100 rounded-top bg-light"
+                                    <img src="/client/img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top"
                                         alt="">
+                                </div>
+                                <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                                    style="top: 10px; right: 10px;">Vegetable</div>
+                                <div class="p-4 pb-0 rounded-bottom">
+                                    <h4>Parsely</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
+                                        incididunt</p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                        <p class="text-dark fs-5 fw-bold">$4.99 / kg</p>
+                                        <a href="#"
+                                            class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
+                                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-primary rounded position-relative vesitable-item">
+                                <div class="vesitable-img">
+                                    <img src="/client/img/vegetable-item-1.jpg" class="img-fluid w-100 rounded-top"
+                                        alt="">
+                                </div>
+                                <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                                    style="top: 10px; right: 10px;">Vegetable</div>
+                                <div class="p-4 pb-0 rounded-bottom">
+                                    <h4>Parsely</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te
+                                        incididunt</p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                        <p class="text-dark fs-5 fw-bold">$4.99 / kg</p>
+                                        <a href="#"
+                                            class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
+                                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-primary rounded position-relative vesitable-item">
+                                <div class="vesitable-img">
+                                    <img src="/client/img/vegetable-item-3.png"
+                                        class="img-fluid w-100 rounded-top bg-light" alt="">
                                 </div>
                                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
                                     style="top: 10px; right: 10px;">Vegetable</div>
@@ -428,7 +430,8 @@
                             </div>
                             <div class="border border-primary rounded position-relative vesitable-item">
                                 <div class="vesitable-img">
-                                    <img src="/client/img/vegetable-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                    <img src="/client/img/vegetable-item-4.jpg" class="img-fluid w-100 rounded-top"
+                                        alt="">
                                 </div>
                                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
                                     style="top: 10px; right: 10px;">Vegetable</div>
@@ -446,7 +449,8 @@
                             </div>
                             <div class="border border-primary rounded position-relative vesitable-item">
                                 <div class="vesitable-img">
-                                    <img src="/client/img/vegetable-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                    <img src="/client/img/vegetable-item-5.jpg" class="img-fluid w-100 rounded-top"
+                                        alt="">
                                 </div>
                                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
                                     style="top: 10px; right: 10px;">Vegetable</div>
@@ -464,7 +468,8 @@
                             </div>
                             <div class="border border-primary rounded position-relative vesitable-item">
                                 <div class="vesitable-img">
-                                    <img src="/client/img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                    <img src="/client/img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top"
+                                        alt="">
                                 </div>
                                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
                                     style="top: 10px; right: 10px;">Vegetable</div>
@@ -482,7 +487,8 @@
                             </div>
                             <div class="border border-primary rounded position-relative vesitable-item">
                                 <div class="vesitable-img">
-                                    <img src="/client/img/vegetable-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                    <img src="/client/img/vegetable-item-5.jpg" class="img-fluid w-100 rounded-top"
+                                        alt="">
                                 </div>
                                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
                                     style="top: 10px; right: 10px;">Vegetable</div>
@@ -500,7 +506,8 @@
                             </div>
                             <div class="border border-primary rounded position-relative vesitable-item">
                                 <div class="vesitable-img">
-                                    <img src="/client/img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                    <img src="/client/img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top"
+                                        alt="">
                                 </div>
                                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
                                     style="top: 10px; right: 10px;">Vegetable</div>
@@ -522,13 +529,10 @@
             </div>
             <!-- Single Product End -->
 
-            <jsp:include page="../layout/footer.jsp" />
-
-
             <!-- Back to Top -->
             <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i
                     class="fa fa-arrow-up"></i></a>
-
+            <jsp:include page="../layout/footer.jsp" />
 
             <!-- JavaScript Libraries -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

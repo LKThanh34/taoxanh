@@ -10,7 +10,7 @@
             <jsp:include page="../layout/navigation.jsp" />
 
             <!-- breadcrumb -->
-            <div class="container-fluid bg-light">
+            <div class="container-fluid bg-white">
                 <div class="container">
                     <ol class="breadcrumb mb-0 small text-truncate">
                         <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
@@ -41,8 +41,8 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative">
-                                <img src="/client/img/hero_spatial__gna2d6arpimq_large_2x.png" class="img-fluid w-100 rounded"
-                                    alt="">
+                                <img src="/client/img/hero_spatial__gna2d6arpimq_large_2x.png"
+                                    class="img-fluid w-100 rounded" alt="">
                             </div>
                         </div>
                     </div>
@@ -97,16 +97,11 @@
             </div>
             <!-- Featurs End -->
 
-
-
-
-
-            <jsp:include page="../layout/footer.jsp" />
-
-
             <!-- Back to Top -->
             <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i
                     class="fa fa-arrow-up"></i></a>
+
+            <jsp:include page="../layout/footer.jsp" />
         </body>
 
         </html>

@@ -9,6 +9,15 @@
 
             <jsp:include page="../layout/navigation.jsp" />
 
+            <!-- breadcrumb -->
+            <div class="container-fluid bg-white">
+                <div class="container">
+                    <ol class="breadcrumb mb-0 small text-truncate">
+                        <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">iPhone</li>
+                    </ol>
+                </div>
+            </div>
             <!-- product detail -->
             <!-- Single Product Start -->
             <div class="container-fluid">
@@ -17,10 +26,10 @@
                         <div class="col-lg-12 col-xl-12">
                             <div class="row g-4">
                                 <div class="col-lg-5 py-5">
-                                    <div class="border rounded">
+                                    <div>
                                         <a href="#">
-                                            <img src="/client/img/iphone-16-blue-600x600.png" class="img-fluid rounded"
-                                                alt="Image">
+                                            <img src="/client/img/iphone-16-blue-600x600.png"
+                                                class="img-fluid" alt="Image">
                                         </a>
                                     </div>
                                 </div>
@@ -457,13 +466,10 @@
                 </div>
             </div>
             <!-- Single Product End -->
-
-            <jsp:include page="../layout/footer.jsp" />
-
-
             <!-- Back to Top -->
             <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i
                     class="fa fa-arrow-up"></i></a>
+            <jsp:include page="../layout/footer.jsp" />
         </body>
 
         </html>

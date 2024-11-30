@@ -24,10 +24,10 @@ public class UserController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @GetMapping("/admin/user")
+    @GetMapping("/dashboard/user")
     public String getUserPage(Model model) {
         List<User> users = this.userService.getAllUsers();
-        System.out.println(">>> Check users arr " + users);
+        // System.out.println(">>> Check users arr " + users);
         model.addAttribute("users1", users);
         return "admin/user/show";
     }
@@ -52,12 +52,12 @@ public class UserController {
             @RequestParam("file") MultipartFile file) {
         String avatar = this.uploandService.handleSaveUploandFile(file, "avatar");
 
-        String hashPassword = this.passwordEncoder.encode(newU.getPassword());
+        String hashPassword = this.passwordEncoder.encode(newU.getUserPassword());
 
-        newU.setAvatar(avatar);
-        newU.setPassword(hashPassword);
+        newU.setAvatarImage(avatar);
+        newU.setUserPassword(hashPassword);
 
-        newU.setRole(this.userService.getRoleByName(newU.getRole().getName()));
+        newU.setRole(this.userService.getRoleByName(newU.getRole().getRoleName()));
         // save
         this.userService.handleSaveUser(newU);
         return "redirect:/admin/user";
@@ -77,7 +77,7 @@ public class UserController {
             currentUser.setAddress(user.getAddress());
             currentUser.setUsername(user.getUsername());
             currentUser.setPhone(user.getPhone());
-            currentUser.setDescription(user.getDescription());
+            currentUser.setUserDescription(user.getUserDescription());
             
 
             this.userService.handleSaveUser(currentUser);

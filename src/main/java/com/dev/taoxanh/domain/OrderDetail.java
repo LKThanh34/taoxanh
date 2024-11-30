@@ -26,18 +26,18 @@ public class OrderDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // IDENTITY
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "order_reference_id")
     private Order order;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "product_reference_id")
     private Product product;
 
-    @Column(name = "description", length = 300, nullable = true)
-    private String description;
+    @Column(name = "client_description", length = 300, nullable = true) // đổi tên để thống nhất
+    private String clientDescription;
 
     @Column(name = "quantity", nullable = false)
     private Integer quantity;

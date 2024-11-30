@@ -1,14 +1,18 @@
 package com.dev.taoxanh.domain;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.List;
 
+
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.String;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -24,53 +28,35 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Product extends BaseModel {
+public class Product{
 
-    @Column(name = "name", length = 500, nullable = false)
-    private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @Column(name = "price", nullable = true)
-    private BigDecimal price;
+    @Column(name = "product_name", length = 500, nullable = false)
+    private String productName;
 
-    @Column(name = "sale_price", nullable = true)
-    private BigDecimal salePrice;
+    @Column(name = "product_avatar", length = 255, nullable = true)
+    private String productAvatar;
 
-    @Column(name = "short_description", length = 3000, nullable = true)
-    private String shortDescription;
-
-    @Column(name = "detail_description", nullable = true)
-    private String detailDescription;
-
-    @Column(name = "avatar", length = 255, nullable = true)
-    private String avatar;
-
-
-    @Column(name = "color", length = 125, nullable = true)
-    private String color;
-
-    @Column(name = "memory", length = 255, nullable = true)
-    private String memory;
-
-    @Column(name = "is_hot", nullable = true)
-    private Boolean isHot = Boolean.FALSE;
-
-    @Column(name = "sticker", length = 255, nullable = true)
-    private String sticker;
-
-    @Column(name = "incentive", length = 255, nullable = true)
-    private String incentive;
-
-    @Column(name = "quantity", nullable = false)
-    private BigInteger quantity;
+    @ManyToOne
+    @JoinColumn(name = "generation_id", nullable = false)
+    private ProductGeneration productGeneration;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
+
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<ProductImage> productImages;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "product")
     private List<OrderDetail> orderDetails;
+
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private List<ProductVariant> productVariants;
 
 }

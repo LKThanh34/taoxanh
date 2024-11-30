@@ -40,7 +40,7 @@ public class UserService {
     }
 
     public Role getRoleByName(String name) {
-        return this.roleRepository.findByName(name);
+        return this.roleRepository.findByRoleName(name);
     }
 
 }

@@ -11241,3 +11241,18 @@ body {
   font-size: 0.75rem;
   border-radius: 0.375rem !important;
 }
+/*  */
+.img-category{
+  max-width: 100%;
+}
+.bg-grey{
+  background-color: #E1E1E1;
+}
+.border-bold {
+  border-width: 4px !important; /* Tăng độ dày border */
+  border-color: #ccc; /* Màu border mặc định */
+  transition: border-color 0.3s ease; /* Hiệu ứng mượt */
+}
+.border-bold:hover {
+  border-color: #2EAE17; /* Đổi màu border sang xanh lam khi hover */
+}
