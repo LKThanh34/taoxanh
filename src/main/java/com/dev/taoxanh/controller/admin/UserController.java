@@ -32,7 +32,7 @@ public class UserController {
         return "admin/user/show";
     }
 
-    @RequestMapping("/admin/user/{id}")
+    @RequestMapping("/dashboard/user/{id}")
     public String getUserDetailPage(Model model, @PathVariable long id) {
         User user = this.userService.getUserById(id);
         model.addAttribute("user",user);
@@ -40,13 +40,13 @@ public class UserController {
         return "admin/user/detail";
     }
 
-    @GetMapping(value = "/admin/user/create")
+    @GetMapping(value ="/dashboard/user/create")
     public String getCreateUserPage(Model model) {
         model.addAttribute("newUser", new User());
         return "admin/user/create";
     }
 
-    @PostMapping(value = "/admin/user/create")
+    @PostMapping(value = "/dashboard/user/create")
     public String createUserPage(Model model,
             @ModelAttribute("newUser") User newU,
             @RequestParam("file") MultipartFile file) {
@@ -60,17 +60,17 @@ public class UserController {
         newU.setRole(this.userService.getRoleByName(newU.getRole().getRoleName()));
         // save
         this.userService.handleSaveUser(newU);
-        return "redirect:/admin/user";
+        return "redirect:/dashboard/user";
     }
 
-    @RequestMapping("/admin/user/update/{id}") // GET
+    @RequestMapping("/dashboard/user/update/{id}") // GET
     public String getUpdateUserPage(Model model, @PathVariable long id) {
         User currentUser = this.userService.getUserById(id);
         model.addAttribute("newUser", currentUser);
         return "admin/user/update";
     }
 
-    @PostMapping("/admin/user/update")
+    @PostMapping("/dashboard/user/update")
     public String postUpdateUser(Model model, @ModelAttribute("newUser") User user) {
         User currentUser = this.userService.getUserById(user.getId());
         if (currentUser != null) {
@@ -82,10 +82,10 @@ public class UserController {
 
             this.userService.handleSaveUser(currentUser);
         }
-        return "redirect:/admin/user";
+        return "redirect:/dashboard/user";
     }
 
-    @GetMapping("/admin/user/delete/{id}")
+    @GetMapping("/dashboard/user/delete/{id}")
     public String getDeleteUserPage(Model model, @PathVariable long id) {
         model.addAttribute("id", id);
         // User user = new User();
@@ -94,9 +94,9 @@ public class UserController {
         return "admin/user/delete";
     }
 
-    @PostMapping("/admin/user/delete")
+    @PostMapping("/dashboard/user/delete")
     public String postDeleteUserPage(Model model, @ModelAttribute("newUser") User thanh) {
         this.userService.deleteAUser(thanh.getId());
-        return "redirect:/admin/user";
+        return "redirect:/dashboard/user";
     }
 }

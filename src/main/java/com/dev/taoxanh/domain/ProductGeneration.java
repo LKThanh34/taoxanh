@@ -30,14 +30,11 @@ public class ProductGeneration {
     @Column(name = "generation_id")
     private Long id;
 
-    @Column(name = "generation_name", length = 200, nullable = false)
+    @Column(name = "generation_name", length = 200, nullable = true)
     private String generationName;
 
-    @Column(name = "generation_description", length = 1000, nullable = true)
-    private String generation_description;
-
-    @Column(name = "generation_status", length = 1000, nullable = true)
-    private String generationStatus;
+    @Column(name = "year_of_manufacture", nullable = true)
+    private int yearOfManufacture;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
@@ -45,4 +42,12 @@ public class ProductGeneration {
 
     @OneToMany(mappedBy = "productGeneration", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Product> products;
+
+    @ManyToOne
+    @JoinColumn(name = "description_Id", nullable = false)
+    private Description description;
+
+    @ManyToOne
+    @JoinColumn(name = "status_id", nullable = false)
+    private Status status;
 }

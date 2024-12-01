@@ -8,5 +8,14 @@ import com.dev.taoxanh.domain.ProductGeneration;
 
 @Repository
 public interface GenerationRepository extends JpaRepository<ProductGeneration, Long> {
+
+    ProductGeneration save(ProductGeneration newProductGeneration);
+
+    void deleteById(long id);
+
+    ProductGeneration findById(long id);
+
     List<ProductGeneration>findByCategory(Category category);
+
+    List<ProductGeneration>findByYearOfManufacture(int yearOfManufacture);
 }

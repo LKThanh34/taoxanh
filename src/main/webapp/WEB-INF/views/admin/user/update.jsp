@@ -33,7 +33,7 @@
                                         <div class="col-md-6 col-12 mx-auto">
                                             <h3>Update a user</h3>
                                             <hr />
-                                            <form:form method="post" action="/admin/user/update"
+                                            <form:form method="post" action="/dashboard/user/update"
                                                 modelAttribute="newUser">
 
                                                 <div class="mb-3" style="display: none;">

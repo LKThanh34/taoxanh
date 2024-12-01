@@ -1,10 +1,30 @@
 use taoxanh;
 
-INSERT INTO roles (id, role_description, role_name) 
+DELETE FROM product_variant;
+DELETE FROM products;
+DELETE FROM product_generations;
+
+INSERT INTO roles ( role_description, role_name) 
 VALUES 
-(1, 'Quản trị viên hệ thống', 'ADMIN'),
-(2, 'Người dùng thông thường', 'USER'),
-(3, 'Người quản lý nội dung', 'STAFF');
+( 'Quản trị viên hệ thống', 'ADMIN'),
+( 'Người dùng thông thường', 'USER'),
+( 'Người quản lý nội dung', 'STAFF');
+
+INSERT INTO status (state_name, state_description) 
+VALUES 
+('stop','dừng bán'),
+('hot','hàng mới về'),
+('KM','hàng khuyến mãi'),
+
+('silver','khách hàng bạc'),
+('gold','khách hàng bạc'),
+('diamond','khách hàng kim cường'),
+
+('new','Mới nguyên hộp, chưa kích hoạt'),
+('like new','Sạc ít & pin 100% hoàn hảo.'),
+('99','Hình thức đẹp, pin tốt'),
+('gold','khách hàng hạng vàng');
+
 
 insert into categories( category_image, category_name)
 values
@@ -14,9 +34,11 @@ values
 ('macbook.png','MACBOOK'),
 ('phukien.png','ACCESSORIES');
 
-insert into product_generations(generation_name, category_id, generation_status)
+
+
+insert into product_generations(generation_name, category_id, status_id , year_of_manufacture,generation_description)
 values
-('Iphone 16 Series', 1, 'new' ),
+('Iphone 16 Series', 1, 'new', 2017, '' ),
 ('Iphone 15 Series', 1, 'hot'),
 ('Iphone 14 Series', 1, 'hot'),
 ('Iphone 13 Series', 1, 'hot'),

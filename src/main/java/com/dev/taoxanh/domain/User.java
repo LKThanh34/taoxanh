@@ -63,4 +63,8 @@ public class User {
 
 	@OneToMany(mappedBy = "user")
 	private List<Order> orders;
+
+	@ManyToOne
+    @JoinColumn(name = "status_id", nullable = true)
+    private Status status;
 }

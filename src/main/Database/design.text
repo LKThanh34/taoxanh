@@ -1,0 +1,18 @@
+Phần sản phẩm (Modeling Product Variants)
+
+1.bảng attributes 
+    + lưu tên biến thể
+    + Quan hệ 1-n với bảng attribute_value (1 biến thể có nhiều giá trị biến thể)
+
+    eg.(id=1 name=color) 
+
+2.bảng attribute_value
+    + lưu giá trị biên thể
+    + 1 giá trị biến thể thuộc về 1 biến thể
+
+    eg. (id=1, attribute_id=1, value=black)
+        (id=2, attribute_id=1, value=white)
+
+3.bảng product_variant
+    + lưu thông tin biến thể sản phẩm
+    + 

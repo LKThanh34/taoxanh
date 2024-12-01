@@ -22,28 +22,76 @@
                 <div id="layoutSidenav_content">
                     <main>
                         <div class="container-fluid px-4">
-                            <h1 class="mt-4">Manage Users</h1>
                             <ol class="breadcrumb mb-4">
                                 <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
                             </ol>
                             <div class="mt-5">
-                                <div class="row">
-                                    <c:forEach var="category" items="${categoryList}">
-                                        <div class="col-xl-2 col-md-6 ">
-                                            <div class="card bg-light text-dark border-bold">
-                                                <div class="card-body"><img class="img-category"
-                                                        src="/admin/images/${category.categoryImage}" alt="">
-                                                </div>
-                                                <div
-                                                    class="card-footer d-flex align-items-center justify-content-between">
-                                                    <a class="text-dark stretched-link"
-                                                        href="">${category.categoryName}</a>
-                                                    <div class="small text-dark"><i class="fas fa-angle-right"></i>
-                                                    </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-2 col-md-6 ">
+                                        <div class="card bg-light text-dark border-bold">
+                                            <div class="card-body"><img class="img-category"
+                                                    src="/admin/images/iphone.png" alt="">
+                                            </div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                <a class="text-dark stretched-link"
+                                                    href="/dashboard/generation/1">IPHONE</a>
+                                                <div class="small text-dark"><i class="fas fa-angle-right"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                    </c:forEach>
+                                    </div>
+                                    <div class="col-xl-2 col-md-6 ">
+                                        <div class="card bg-light text-dark border-bold">
+                                            <div class="card-body"><img class="img-category"
+                                                    src="/admin/images/ipad.png" alt="">
+                                            </div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                <a class="text-dark stretched-link"
+                                                    href="/dashboard/generation/2">IPAD</a>
+                                                <div class="small text-dark"><i class="fas fa-angle-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-md-6 ">
+                                        <div class="card bg-light text-dark border-bold">
+                                            <div class="card-body"><img class="img-category"
+                                                    src="/admin/images/macbook.png" alt="">
+                                            </div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                <a class="text-dark stretched-link"
+                                                    href="/dashboard/generation/4">MACBOOK</a>
+                                                <div class="small text-dark"><i class="fas fa-angle-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-md-6 ">
+                                        <div class="card bg-light text-dark border-bold">
+                                            <div class="card-body"><img class="img-category"
+                                                    src="/admin/images/watch.png" alt="">
+                                            </div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                <a class="text-dark stretched-link"
+                                                    href="/dashboard/generation/3">WATCH</a>
+                                                <div class="small text-dark"><i class="fas fa-angle-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-md-6 ">
+                                        <div class="card bg-light text-dark border-bold">
+                                            <div class="card-body"><img class="img-category"
+                                                    src="/admin/images/phukien.png" alt="">
+                                            </div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                <a class="text-dark stretched-link" href="/dashboard/generation/5">PHỤ
+                                                    KIỆN</a>
+                                                <div class="small text-dark"><i class="fas fa-angle-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
 

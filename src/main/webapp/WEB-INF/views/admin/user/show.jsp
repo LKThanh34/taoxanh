@@ -31,7 +31,7 @@
                                     <div class="col-12 mx-auto">
                                         <div class="d-flex justify-content-between">
                                             <h3>Table users</h3>
-                                            <a href="/admin/user/create" class="btn btn-primary">Create a user</a>
+                                            <a href="/dashboard/user/create" class="btn btn-primary">Create a user</a>
                                         </div>
 
                                         <hr />
@@ -56,11 +56,11 @@
                                                         <td>${user.phone}</td>
                                                         <td>${user.role.roleName}</td>
                                                         <td>
-                                                            <a href="/admin/user/${user.id}"
+                                                            <a href="/dashboard/user/${user.id}"
                                                                 class="btn btn-success">View</a>
-                                                            <a href="/admin/user/update/${user.id}"
+                                                            <a href="/dashboard/user/update/${user.id}"
                                                                 class="btn btn-warning  mx-2">Update</a>
-                                                            <a href="/admin/user/delete/${user.id}"
+                                                            <a href="/dashboard/user/delete/${user.id}"
                                                                 class="btn btn-danger">Delete</a>
                                                         </td>
                                                     </tr>

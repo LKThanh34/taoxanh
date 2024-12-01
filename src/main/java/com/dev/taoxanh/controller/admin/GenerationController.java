@@ -15,7 +15,17 @@ public class GenerationController {
     public GenerationController(GenerationService generationService) {
         this.generationService = generationService;
     }
+
+    @GetMapping("/dashboard/generation/{categoryId}")
+    public String getGenerationsByCategory(@PathVariable Long categoryId, Model model){
+        List<ProductGeneration> generations = generationService.getGenerationsByCategory(categoryId);
+        model.addAttribute("generations", generations);
+        return "admin/generations/show";
+    }
+
     
+
+
 
 
 }

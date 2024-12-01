@@ -44,11 +44,6 @@ public class Product{
     @JoinColumn(name = "generation_id", nullable = false)
     private ProductGeneration productGeneration;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "category_id", nullable = false)
-    private Category category;
-
-
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<ProductImage> productImages;
 

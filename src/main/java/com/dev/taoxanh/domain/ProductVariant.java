@@ -41,6 +41,12 @@ public class ProductVariant {
     @Column(name = "variant_price", nullable = true)
     private BigDecimal variantPrice;
 
+    @ManyToOne
+    @JoinColumn(name = "specification_id", nullable = false)
+    private Specification specification;
 
+    @ManyToOne
+    @JoinColumn(name = "status_id", nullable = false)
+    private Status status;
 
 }

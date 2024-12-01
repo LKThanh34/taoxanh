@@ -17,28 +17,23 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "categories")
+@Table(name = "descriptions")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Category {
-
+public class Description {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "category_id")
+    @Column(name = "description_id") 
     private Long id;
 
-    @Column(name = "category_name", length = 200, nullable = false)
-    private String categoryName;
+    @Column(name = "title_description", length = 200, nullable = false)
+    private String titleDescription;
 
-    @Column(name = "category_description", length = 300, nullable = true)
-    private String categoryDescription;
+    @Column(name = "description_detailed", length = 500, nullable = false)
+    private String descriptionDetailed;
 
-    @Column(name = "category_image", length = 300, nullable = true)
-    private String categoryImage;
-
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<ProductGeneration> generations;
-
+    @OneToMany(mappedBy = "description", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private List<ProductGeneration> productGenerations;
 }
