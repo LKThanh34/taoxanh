@@ -1,26 +1,27 @@
-package com.dev.taoxanh.controller.user;
+package com.dev.taoxanh.controller.client;
 
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.dev.taoxanh.domain.Category;
+
+
 import com.dev.taoxanh.service.CategoryService;
+
 
 @Controller
 public class HomePageController {
 
     private final CategoryService categoryService;
 
+
+
+
     public HomePageController(CategoryService categoryService) {
         this.categoryService = categoryService;
     }
-
-
-
-
 
     // test view
     @GetMapping("/home/client")
@@ -42,5 +43,7 @@ public class HomePageController {
     public String getProductsPage() {
         return "client/product/shop";
     }
+
+
 
 }

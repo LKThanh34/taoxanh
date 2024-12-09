@@ -15,6 +15,10 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Null;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,38 +37,40 @@ public class User {
 
 	@CreationTimestamp
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	@Column(name = "create_date", nullable = true)
+	@Column(name = "create_date")
 	private Date createDate;
 
-	@Column(name = "username", length = 60, nullable = false)
+	@NotNull
+	@Column(name = "username", length = 60)
 	private String username;
 
-	@Column(name = "user_password", length = 60, nullable = false)
+	@Null
+	@Size(min = 3)
+	@Column(name = "user_password", length = 60)
 	private String userPassword;
 
-	@Column(name = "email", length = 120, nullable = true)
+	@NotNull
+	@Email
+	@Column(name = "email", length = 120)
 	private String email;
 
-	@Column(name = "phone", length = 120, nullable = true)
+	@NotNull
+	@Column(name = "phone", length = 120)
 	private String phone;
 
-	@Column(name = "address", length = 200, nullable = true)
+	@Column(name = "address", length = 200)
 	private String address;
 
-	@Column(name = "user_description", length = 200, nullable = true)
-	private String userDescription;
-
-	@Column(name = "avatar_iamge", length = 255, nullable = true)
+	@Column(name = "avatar_iamge", length = 255)
 	private String avatarImage;
 
+	@Column(name = "status")
+	private Integer status;
 	@ManyToOne
-	@JoinColumn(name = "role_id", nullable = false)
+	@JoinColumn(name = "role_id")
 	private Role role;
 
 	@OneToMany(mappedBy = "user")
 	private List<Order> orders;
 
-	@ManyToOne
-    @JoinColumn(name = "status_id", nullable = true)
-    private Status status;
 }

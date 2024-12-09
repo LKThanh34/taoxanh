@@ -36,9 +36,9 @@ public class OrderDetail {
     @JoinColumn(name = "product_reference_id")
     private Product product;
 
-    @Column(name = "client_description", length = 300, nullable = true) // đổi tên để thống nhất
+    @Column(name = "client_description", length = 300) // đổi tên để thống nhất
     private String clientDescription;
 
-    @Column(name = "quantity", nullable = false)
+    @Column(name = "quantity")
     private Integer quantity;
 }

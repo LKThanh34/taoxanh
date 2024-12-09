@@ -32,13 +32,10 @@ public class Category {
     @Column(name = "category_name", length = 200, nullable = false)
     private String categoryName;
 
-    @Column(name = "category_description", length = 300, nullable = true)
-    private String categoryDescription;
-
-    @Column(name = "category_image", length = 300, nullable = true)
+    @Column(name = "category_image", length = 300)
     private String categoryImage;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<ProductGeneration> generations;
+    private List<Product> products;
 
 }

@@ -3,35 +3,44 @@
         <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
             <div class="sb-sidenav-menu">
                 <div class="nav">
-                    <div class="sb-sidenav-menu-heading">Features</div>
+                    <div class="sb-sidenav-menu-heading">Core</div>
                     <a class="nav-link" href="/admin">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Dashboard
+                        TRANG CHỦ
                     </a>
 
                     <a class="nav-link" href="/admin/user">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        User
+                        CỬA HÀNG
                     </a>
-                    <a class="nav-link" href="/admin/category">
+                    <a class="nav-link" href="/admin/user">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Category
+                        ĐƠN HÀNG
                     </a>
-
-                    <a class="nav-link" href="/admin/product">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Product
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
+                        aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        SẢN PHẨM
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
-
+                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                        data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="layout-static.html">IPHONE</a>
+                            <a class="nav-link" href="layout-sidenav-light.html">MACBOOK</a>
+                            <a class="nav-link" href="layout-sidenav-light.html">IPAD</a>
+                            <a class="nav-link" href="layout-sidenav-light.html">WATCH</a>
+                        </nav>
+                    </div>
                     <a class="nav-link" href="/admin/order">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Order
+                        CHĂM SÓC KHÁCH HÀNG
                     </a>
                 </div>
             </div>
             <div class="sb-sidenav-footer">
                 <div class="small">Logged in as:</div>
-                Hỏi Dân IT
+                USER
             </div>
         </nav>
     </div>

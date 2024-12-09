@@ -1,5 +1,7 @@
 package com.dev.taoxanh.domain;
 
+
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,22 +14,25 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table( name = "slide_images")
+@Table(name = "review")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class SlideImage{
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // IDENTITY
-	private Long id;
+public class Review {
 
-    @Column(name="slider_name", length=300, nullable=true)
-	private String slideName;
-	
-	@Column(name="slide_path", length=255, nullable=false)
-	private String slidePath;
-	
-	@Column(name="slider_description", length=500, nullable=true)
-	private String sliderDescription;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "review_id")
+    private Long id;
+
+    @Column(name = "title", length = 150)
+    private String title;
+
+    @Column(name = "product_name", length = 500)
+    private String description;
+
+    @Column(name = "image", length = 500)
+    private String image;
+    
 }

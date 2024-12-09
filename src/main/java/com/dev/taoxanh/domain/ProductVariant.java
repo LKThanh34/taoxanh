@@ -28,25 +28,46 @@ public class ProductVariant {
     @Column(name = "product_variant_id")
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "product_id", nullable = false)
+    @JoinColumn(name = "product_id")
     private Product product;
 
     @ManyToOne
-    @JoinColumn(name = "attribute_value_id", nullable = false)
+    @JoinColumn(name = "attribute_value_id")
     private AttributeValue attributeValue;
 
-    @Column(name = "stock_quantity", nullable = false)
-    private int stockQuantity;
+    @Column(name = "stock_quantity")
+    private Integer stockQuantity;
 
-    @Column(name = "variant_price", nullable = true)
+    @Column(name = "status")
+    private String Status;
+
+    @Column(name = "variant_price")
     private BigDecimal variantPrice;
 
-    @ManyToOne
-    @JoinColumn(name = "specification_id", nullable = false)
-    private Specification specification;
+    @Column(name = "display_technology", length = 200)
+    private String displayTechnology;
 
-    @ManyToOne
-    @JoinColumn(name = "status_id", nullable = false)
-    private Status status;
+    @Column(name = "camera_technology", length = 200)
+    private String camera;
 
+    @Column(name = "processor", length = 200)
+    private String processor;
+
+    @Column(name = "battery", length = 200)
+    private String battery;
+
+    @Column(name = "resolutions", length = 200)
+    private String resolution;
+
+    @Column(name = "ram", length = 200)
+    private String ram;
+
+    @Column(name = "storage", length = 200)
+    private String storage;
+    
+    @Column(name = "material", length = 200)
+    private String material;
+    
+    @Column(name = "price")
+	private BigDecimal price;
 }

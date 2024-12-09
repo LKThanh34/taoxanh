@@ -38,37 +38,34 @@ public class Order {
 
 	@CreationTimestamp
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	@Column(name = "order_date", nullable = true)
+	@Column(name = "order_date")
 	private Date orderDate;
 
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	@Column(name = "receive_date", nullable = true)
+	@Column(name = "receive_date")
 	private Date receiveDate;
-
-	@Column(name = "code", length = 45, nullable = false)
-	private String code;
 
 	// Mapping many-to-one: saleOrder-to-user
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "user_id")
 	private User user;
 
-	@Column(name = "total", nullable = true)
+	@Column(name = "total")
 	private BigDecimal total;
 
-	@Column(name = "customer_name", length = 100, nullable = true)
+	@Column(name = "customer_name", length = 100)
 	private String customerName;
 
-	@Column(name = "customer_address", length = 200, nullable = true)
+	@Column(name = "customer_address", length = 200)
 	private String customerAddress;
 
-	@Column(name = "customer_email", length = 100, nullable = true)
+	@Column(name = "customer_email", length = 100)
 	private String customerEmail;
 
-	@Column(name = "customer_mobile", length = 100, nullable = true)
+	@Column(name = "customer_mobile", length = 100)
 	private String customerMobile;
 
-	@Column(name = "description_order", length = 3000, nullable = true)
+	@Column(name = "description_order", length = 3000)
 	private String descriptionOrder;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "order")

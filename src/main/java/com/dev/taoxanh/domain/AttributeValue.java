@@ -33,13 +33,13 @@ public class AttributeValue {
     private Long id;
     
 	@ManyToOne
-	@JoinColumn(name = "attribute_id", nullable = false)
+	@JoinColumn(name = "attribute_id")
 	private Attribute attribute;
 
     @OneToMany(mappedBy = "attributeValue", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<ProductVariant> productVariants;
 
-    @Column(name = "attribute_value", length = 200, nullable = false)
+    @Column(name = "attribute_value", length = 200)
     private String attributeValue;
     
 }

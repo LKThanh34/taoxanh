@@ -19,44 +19,61 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Manage Users</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Users</li>
-                    </ol>
+                    <div class="row justify-content-center">
+
+                        <div th:each="category : ${categoryList}" class="col-xl-2 col-md-3 col-sm-6">
+                            <div class="card bg-light text-dark mb-4">
+                                <div class="card-body">
+                                    <img class="img-fluid"
+                                        th:src="@{/admin/images/{image}(image=${category.categoryImage})}" alt="" />
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="text-dark stretched-link" href="login.html"
+                                        th:text="${category.categoryName}"></a>
+                                    <div class="small text-dark"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-chart-area me-1"></i>
+                                    Area Chart Example
+                                </div>
+                                <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-chart-bar me-1"></i>
+                                    Bar Chart Example
+                                </div>
+                                <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mt-5">
                         <div class="row">
                             <div class="col-12 mx-auto">
-                                <div class="d-flex justify-content-between">
-                                    <h3>Table users</h3>
-                                    <a href="admin/dashboard/user/create" class="btn btn-primary">Create a user</a>
-                                </div>
 
                                 <hr />
                                 <table class="table table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Email</th>
-                                            <th>Name</th>
-                                            <th>Phone</th>
-                                            <th>Role</th>
-                                            <th>Action</th>
+                                            <th>Mã Đơn Hàng</th>
+                                            <th>Ngày Đặt</th>
+                                            <th>Ngày Nhận</th>
+                                            <th>Sản Phẩm</th>
+                                            <th>SL</th>
+                                            <th>Trạng Thái</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr th:each="user : ${users1}">
-                                            <th th:text="${user.id}"></th>
-                                            <td th:text="${user.email}"></td>
-                                            <td th:text="${user.username}"></td>
-                                            <td th:text="${user.phone}">123456789</td>
-                                            <td th:text="${user.role.roleName}">Admin</td>
-                                            <td>
-                                                <a th:href="@{/admin/user/{id}(id=${user.id})}" class="btn btn-success">View</a>
-                                                <a th:href="@{/admin/user/update/{id}(id=${user.id})}" class="btn btn-warning mx-2">Update</a>
-                                                <a th:href="@{/admin/user/delete/{id}(id=${user.id})}" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -68,7 +85,8 @@
             <th:block th:replace="admin/layout/footer :: footer"></th:block>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
     <script th:src="@{/admin/js/scripts.js}"></script>
 
 </body>

@@ -1,8 +1,7 @@
 package com.dev.taoxanh.domain;
 
-import java.math.BigDecimal;
 import java.util.List;
-
+import java.math.BigDecimal;
 
 import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.String;
 
@@ -34,18 +33,28 @@ public class Product{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "product_name", length = 500, nullable = false)
+    @Column(name = "product_name", length = 500)
     private String productName;
 
-    @Column(name = "product_avatar", length = 255, nullable = true)
-    private String productAvatar;
+    @Column(name = "product_imge", length = 255)
+    private String productImage;
 
-    @ManyToOne
-    @JoinColumn(name = "generation_id", nullable = false)
-    private ProductGeneration productGeneration;
+    @Column(name = "title")
+    private String descriptionTitle;
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<ProductImage> productImages;
+    @Column(name = "price")
+	private BigDecimal price;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "year_of_manufacture")
+    private Integer yearOfManufacture;
+
+    @Column(name = "description_detail")
+    private String descriptionDetail;
+
+
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "product")
     private List<OrderDetail> orderDetails;
@@ -53,5 +62,9 @@ public class Product{
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<ProductVariant> productVariants;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
 
 }

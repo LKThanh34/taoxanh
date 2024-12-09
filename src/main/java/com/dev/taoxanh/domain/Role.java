@@ -28,10 +28,10 @@ public class Role {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // IDENTITY
 	private Long id;
 
-	@Column(name = "role_name", length = 200, nullable = false)
+	@Column(name = "role_name", length = 200)
 	private String roleName;
 
-	@Column(name = "role_description", length = 300, nullable = true)
+	@Column(name = "role_description", length = 300)
 	private String roleDescription;
 
 	@OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

@@ -27,7 +27,7 @@ public class Attribute {
     @Column(name = "attribute_id") 
     private Long id;
 
-    @Column(name = "attribute_name", length = 200, nullable = false)
+    @Column(name = "attribute_name", length = 200)
     private String attributeName;
 
     @OneToMany(mappedBy = "attribute", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

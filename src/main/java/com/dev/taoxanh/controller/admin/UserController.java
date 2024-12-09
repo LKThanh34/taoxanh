@@ -5,12 +5,15 @@ import java.util.List;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.dev.taoxanh.domain.User;
 import com.dev.taoxanh.service.UploandService;
 import com.dev.taoxanh.service.UserService;
+
+import jakarta.validation.Valid;
 
 @Controller
 public class UserController {
@@ -35,12 +38,12 @@ public class UserController {
     @RequestMapping("/dashboard/user/{id}")
     public String getUserDetailPage(Model model, @PathVariable long id) {
         User user = this.userService.getUserById(id);
-        model.addAttribute("user",user);
+        model.addAttribute("user", user);
         model.addAttribute("id", id);
         return "admin/user/detail";
     }
 
-    @GetMapping(value ="/dashboard/user/create")
+    @GetMapping(value = "/dashboard/user/create")
     public String getCreateUserPage(Model model) {
         model.addAttribute("newUser", new User());
         return "admin/user/create";
@@ -48,8 +51,10 @@ public class UserController {
 
     @PostMapping(value = "/dashboard/user/create")
     public String createUserPage(Model model,
-            @ModelAttribute("newUser") User newU,
-            @RequestParam("file") MultipartFile file) {
+            @ModelAttribute("newUser") @Valid User newU,
+            @RequestParam("file") MultipartFile file, BindingResult bindingResult) {
+        // validate
+
         String avatar = this.uploandService.handleSaveUploandFile(file, "avatar");
 
         String hashPassword = this.passwordEncoder.encode(newU.getUserPassword());
@@ -77,9 +82,6 @@ public class UserController {
             currentUser.setAddress(user.getAddress());
             currentUser.setUsername(user.getUsername());
             currentUser.setPhone(user.getPhone());
-            currentUser.setUserDescription(user.getUserDescription());
-            
-
             this.userService.handleSaveUser(currentUser);
         }
         return "redirect:/dashboard/user";
